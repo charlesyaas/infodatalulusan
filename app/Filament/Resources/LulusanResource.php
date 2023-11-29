@@ -58,9 +58,11 @@ class LulusanResource extends Resource
                 ->maxLength(255),
             Forms\Components\DatePicker::make('tanggal_lahir')
                 ->label('Tanggal Lahir')
+                ->native(false)
+                ->format('d/m/Y')
                 ->required(),
             Forms\Components\TextInput::make('orang_tua')
-                ->label('Nama Orang Tua (Ibu)')
+                ->label('Nama Orang Tua')
                 ->required()
                 ->maxLength(255),
             Forms\Components\TextInput::make('no_peserta_un')
@@ -131,7 +133,7 @@ class LulusanResource extends Resource
     }
 
     public static function getNavigationBadge(): ?string
-{
-    return static::getModel()::count();
-}
+        {
+            return static::getModel()::count();
+        }
 }

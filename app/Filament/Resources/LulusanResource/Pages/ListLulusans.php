@@ -2,9 +2,10 @@
 
 namespace App\Filament\Resources\LulusanResource\Pages;
 
-use App\Filament\Resources\LulusanResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
+use App\Filament\Resources\LulusanResource;
+use EightyNine\ExcelImport\ExcelImportAction;
 
 class ListLulusans extends ListRecords
 {
@@ -13,7 +14,10 @@ class ListLulusans extends ListRecords
     protected function getHeaderActions(): array
     {
         return [
+            ExcelImportAction::make()
+                ->color("primary"),
             Actions\CreateAction::make(),
+
         ];
     }
 }
