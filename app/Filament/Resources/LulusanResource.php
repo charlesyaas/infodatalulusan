@@ -10,6 +10,7 @@ use Filament\Tables\Table;
 use Forms\Component\Select;
 use Filament\Forms\Components\Section;
 use Filament\Resources\Resource;
+use Filament\Forms\Components\Placeholder;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\LulusanResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -45,6 +46,7 @@ class LulusanResource extends Resource
                 ]),
             Forms\Components\TextInput::make('tahun_lulus')
                 ->label('Tahun Lulus')
+
                 ->required()
                 ->numeric()
                 ->maxLength(255),
@@ -70,7 +72,7 @@ class LulusanResource extends Resource
                 ->required()
                 ->maxLength(255),
             ])->columns(3),
-            ]); 
+            ]);
     }
 
     public static function table(Table $table): Table
@@ -113,7 +115,12 @@ class LulusanResource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
+
             ]);
+
+            // ->headerActions([
+            //     Tables\Actions\CreateAction::make(),
+            // ]);
     }
 
     public static function getRelations(): array
