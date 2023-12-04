@@ -38,6 +38,7 @@ class ListLulusans extends ListRecords
         if($this->file != ''){
             Excel::import(new ImportLulusann, $this->file);
         }
+        return redirect()->back();
         // Lulusan::create([
         // 'jenjang' => 'Hello',
         // 'tahun_lulus' => 'Hello',

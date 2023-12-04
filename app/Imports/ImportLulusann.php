@@ -19,7 +19,7 @@ class ImportLulusann implements ToModel
             'tahun_lulus' =>  $row[1],
             'nama'  =>  $row[2],
             'tempat_lahir'  =>  $row[3],
-            'tanggal_lahir'  =>  $row[4],
+            'tanggal_lahir'  => \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($row[4]),
             'orang_tua'  =>  $row[5],
             'no_peserta_un'  =>  $row[6],
         ]);
