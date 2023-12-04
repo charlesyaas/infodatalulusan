@@ -8,8 +8,9 @@
         Data Kelulusan
     </div>
     <div>
-        <a href="#">Export PDF | </a>
-        <a href="#">Print</a>
+        <a href="{{ route('download.kelulusan') }}"><x-heroicon-o-document-arrow-down class="h-6 w-6" /> </a>
+        <br>
+        <a href="#"><x-heroicon-o-printer class="h-6 w-6" /> </a>
      </div>
 </div>
 
