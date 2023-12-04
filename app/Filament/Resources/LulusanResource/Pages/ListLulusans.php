@@ -27,8 +27,8 @@ class ListLulusans extends ListRecords
 
     public function getHeader(): ?View
     {
-        $data =  Actions\CreateAction::make();
-        return view('import',compact('data'));
+        // $data =  Actions\CreateAction::make();
+        return view('import');
     }
 
     public $file ='';
@@ -37,8 +37,8 @@ class ListLulusans extends ListRecords
     {
         if($this->file != ''){
             Excel::import(new ImportLulusann, $this->file);
+            return redirect()->back();
         }
-        return redirect()->back();
         // Lulusan::create([
         // 'jenjang' => 'Hello',
         // 'tahun_lulus' => 'Hello',

@@ -116,11 +116,11 @@ class LulusanResource extends Resource
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
 
-            ]);
+            ])
 
-            // ->headerActions([
-            //     Tables\Actions\CreateAction::make(),
-            // ]);
+            ->headerActions([
+                Tables\Actions\CreateAction::make(),
+            ]);
     }
 
     public static function getRelations(): array
