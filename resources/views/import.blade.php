@@ -7,9 +7,14 @@
     <div class="font-bold text-3xl">
         Data Kelulusan
     </div>
-
+    <div>
+        <a href="#">Export PDF | </a>
+        <a href="#">Print</a>
+     </div>
 </div>
+
 <div>
+
     <form wire:submit="save" class="w-full max-w-sm flex mt-2">
         <div class="mb-4">
 
@@ -25,9 +30,6 @@
         </div>
     </form>
 
-    <div>
-        <a href="#">Export PDF | </a>
-        <a href="#">Print</a>
-     </div>
+
 </div>
 
