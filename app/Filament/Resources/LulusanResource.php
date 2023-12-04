@@ -60,8 +60,8 @@ class LulusanResource extends Resource
                 ->maxLength(255),
             Forms\Components\DatePicker::make('tanggal_lahir')
                 ->label('Tanggal Lahir')
-                ->native(false)
-                ->format('d/m/Y')
+                // ->native(false)
+                ->format('Y/m/d')
                 ->required(),
             Forms\Components\TextInput::make('orang_tua')
                 ->label('Nama Orang Tua')
