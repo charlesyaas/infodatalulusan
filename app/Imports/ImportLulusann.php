@@ -14,6 +14,7 @@ class ImportLulusann implements ToModel
     */
     public function model(array $row)
     {
+
         return new Lulusan([
             'jenjang' =>  $row[0],
             'tahun_lulus' =>  $row[1],

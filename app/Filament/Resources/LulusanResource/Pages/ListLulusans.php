@@ -11,8 +11,12 @@ use Filament\Resources\Pages\ListRecords;
 use App\Filament\Resources\LulusanResource;
 use EightyNine\ExcelImport\ExcelImportAction;
 
+
+
 class ListLulusans extends ListRecords
 {
+
+
     protected static string $resource = LulusanResource::class;
 
     protected function getHeaderActions(): array
@@ -31,13 +35,14 @@ class ListLulusans extends ListRecords
         return view('import');
     }
 
-    public $file ='';
+    public $file = '';
 
     public function save()
     {
+
         if($this->file != ''){
-            Excel::import(new ImportLulusann, $this->file);
-            return redirect()->back();
+            Excel::import(new ImportLulusann(), $this->file);
+
         }
         // Lulusan::create([
         // 'jenjang' => 'Hello',

@@ -23,4 +23,5 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/download', [ReportController::class, 'exportDataLulusan'])->name('download.kelulusan');
 
+    Route::post('/upload', [ReportController::class,'upload_csv_file'])->name('upload');
 });
