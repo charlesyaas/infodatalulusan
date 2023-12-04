@@ -10,6 +10,6 @@ class ReportController extends Controller
     // Export Lulusann
     public function exportDataLulusan() {
 
-        return Excel::download(new ExportLulusan(), 'Report Lulusan'.'.csv');
+        return Excel::download(new ExportLulusan(), 'Report Lulusan'.'.xlsx');
     }
 }
